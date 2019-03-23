@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Attendance Cleaner",
+  "version": "1.0",
+  "description": "Removes the clutter and fix appearence of https://myattendance.harbingergroup.com",
+  "author": "Siddharth Kochar",
+  "icons": {
+    "128": "icons/icon128.png",
+    "48": "icons/icon48.png",
+    "16": "icons/icon16.png"
+  },
+  "background": {
+    "scripts": [ "js/jquery-3.2.1.min.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon16.png",
+    "default_title": "Attendance Cleaner"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://myattendance.harbingergroup.com/*" ],
+      "js": [ "js/jquery-3.2.1.min.js", "js/myattendance.js" ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
